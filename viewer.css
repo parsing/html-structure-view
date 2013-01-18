@@ -1,0 +1,100 @@
+/*
+//////////////////////
+// HTML STRUTURE VIEW
+//////////////////
+// github.com/thiagodini/html-structure-view
+// version 0.1 beta
+// @thiagodini
+/////////////
+*/
+
+/*
+//////////////
+// PAGE BASIC RESET
+/////////////
+*/
+
+* {	padding: 0;	margin: 0; }
+body { font-size: 62.5%; }
+li li {	margin: 0 0 0 20px; }
+
+/*
+//////////////
+// HEADERS
+/////////////
+*/
+
+h1 {
+	font-size: 2.4em;
+}
+h2 {
+	font-size: 1.8em;
+}
+h3 {
+	font-size: 1.4em;
+}
+
+/*
+//////////
+// TEXT
+//////
+*/
+
+p, li, dd, dt {
+	font-size: 1.2em;
+	font-family: arial, sans-serif;
+}
+
+/*
+////////////
+// STRUCTURAL
+/////////////
+*/
+
+div, header, section, footer {
+	position: relative;
+	padding: 15px;
+	margin: 5px;
+	border: 1px solid #ccc;
+}
+
+/*
+////////////
+// VISUALIZING
+/////////////
+*/
+
+:before {
+	opacity: 0.2;
+}
+:hover:before {
+	opacity: 1;
+	-webkit-transition: 1s opacity ease;
+	   -moz-transition: 1s opacity ease;
+			transition: 1s opacity ease;
+}
+div[id]:before, header[id]:before, section[id]:before, footer[id]:before {
+	content: "#"attr(id)" ";
+	position: absolute;
+	left: 0;
+	top: 0;
+	border: none;
+	padding: 0;
+	display: inline-block;
+	padding: 5px;
+	background: #ccc;
+	color: #000;
+	font-size: 1.2em;
+	font-family: arial, sans-serif;
+}
+
+div[class]:before, header[class]:before, section[class]:before, footer[class]:before {
+	content: "."attr(class)" ";
+	position: absolute;
+	left: 0;
+	top: 0;
+	background: #ddd;
+	color: #666;
+	font-size: 1em;
+	font-family: arial, sans-serif;
+}
