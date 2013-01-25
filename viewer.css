@@ -51,7 +51,7 @@ p, li, dd, dt {
 /////////////
 */
 
-div, header, section, footer {
+div, header, section, footer, nav {
 	position: relative;
 	padding: 15px;
 	margin: 5px;
@@ -73,7 +73,7 @@ div, header, section, footer {
 	   -moz-transition: 1s opacity ease;
 			transition: 1s opacity ease;
 }
-div[id]:before, header[id]:before, section[id]:before, footer[id]:before {
+div[id]:before, header[id]:before, section[id]:before, footer[id]:before, nav[id]:before {
 	content: "#"attr(id)" ";
 	position: absolute;
 	left: 0;
@@ -88,7 +88,7 @@ div[id]:before, header[id]:before, section[id]:before, footer[id]:before {
 	font-family: arial, sans-serif;
 }
 
-div[class]:before, header[class]:before, section[class]:before, footer[class]:before {
+div[class]:before, header[class]:before, section[class]:before, footer[class]:before, nav[class]:before {
 	content: "."attr(class)" ";
 	position: absolute;
 	left: 0;
