@@ -73,8 +73,9 @@ div, header, section, footer, nav {
 	   -moz-transition: 1s opacity ease;
 			transition: 1s opacity ease;
 }
-div[id]:before, header[id]:before, section[id]:before, footer[id]:before, nav[id]:before {
-	content: "#"attr(id)" ";
+div[id]:before, header[id]:before, section[id]:before, footer[id]:before, nav[id]:before,
+div[id][class]:before, header[id][class]:before, section[id][class]:before, footer[id][class]:before, nav[id][class]:before,
+div[class]:before, header[class]:before, section[class]:before, footer[class]:before, nav[class]:before {
 	position: absolute;
 	left: 0;
 	top: 0;
@@ -87,14 +88,12 @@ div[id]:before, header[id]:before, section[id]:before, footer[id]:before, nav[id
 	font-size: 1.2em;
 	font-family: arial, sans-serif;
 }
-
+div[id]:before, header[id]:before, section[id]:before, footer[id]:before, nav[id]:before {
+	content: "#"attr(id);
+}
 div[class]:before, header[class]:before, section[class]:before, footer[class]:before, nav[class]:before {
-	content: "."attr(class)" ";
-	position: absolute;
-	left: 0;
-	top: 0;
-	background: #ddd;
-	color: #666;
-	font-size: 1em;
-	font-family: arial, sans-serif;
+	content: "#"attr(class);
+}
+div[id][class]:before, header[id][class]:before, section[id][class]:before, footer[id][class]:before, nav[id][class]:before {
+	content: "#"attr(id)" & ."attr(class);
 }
