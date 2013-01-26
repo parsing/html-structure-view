@@ -92,7 +92,7 @@ div[id]:before, header[id]:before, section[id]:before, footer[id]:before, nav[id
 	content: "#"attr(id);
 }
 div[class]:before, header[class]:before, section[class]:before, footer[class]:before, nav[class]:before {
-	content: "#"attr(class);
+	content: "."attr(class);
 }
 div[id][class]:before, header[id][class]:before, section[id][class]:before, footer[id][class]:before, nav[id][class]:before {
 	content: "#"attr(id)" & ."attr(class);
